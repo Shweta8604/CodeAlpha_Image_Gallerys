@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Responsive Image Gallery</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <h1>Image Gallery</h1>
+
+  <!-- Filter Buttons -->
+  <div class="filters">
+    <button onclick="filterImages('all')">All</button>
+    <button onclick="filterImages('nature')">Nature</button>
+    <button onclick="filterImages('animals')">Animals</button>
+    <button onclick="filterImages('city')">City</button>
+  </div>
+
+  <!-- Gallery -->
+  <div class="gallery">
+    <div class="image-card nature"><img src="c:\Users\acer\OneDrive\Desktop\CodeAlpha Image Gallery\img\img1.jpg" alt="Nature 1" onclick="openLightbox(this)" /></div>
+    <div class="image-card animals"><img src="c:\Users\acer\OneDrive\Desktop\CodeAlpha Image Gallery\img\img2.jpg" alt="Animal 1" onclick="openLightbox(this)" /></div>
+    <div class="image-card city"><img src="c:\Users\acer\OneDrive\Desktop\CodeAlpha Image Gallery\img\img3.jpg" alt="City 1" onclick="openLightbox(this)" /></div>
+    <div class="image-card nature"><img src="c:\Users\acer\OneDrive\Desktop\CodeAlpha Image Gallery\img\img4.jpg" alt="Nature 2" onclick="openLightbox(this)" /></div>
+    <div class="image-card animals"><img src="c:\Users\acer\OneDrive\Desktop\CodeAlpha Image Gallery\img\img5.jpg" alt="Animal 2" onclick="openLightbox(this)" /></div>
+    <div class="image-card city"><img src="c:\Users\acer\OneDrive\Desktop\CodeAlpha Image Gallery\img\img6.jpg" onclick="openLightbox(this)" /></div>
+    <div class="image-card city"><img src="c:\Users\acer\OneDrive\Desktop\CodeAlpha Image Gallery\img\img3.jpg" alt="City 2" onclick="openLightbox(this)" /></div>
+  </div>
+
+  <!-- Lightbox -->
+  <div id="lightbox" class="lightbox" onclick="closeLightbox()">
+    <span class="close">&times;</span>
+    <img id="lightbox-img" src="" alt="Large View" />
+    <button class="prev" onclick="changeImage(-1)">&#10094;</button>
+    <button class="next" onclick="changeImage(1)">&#10095;</button>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
